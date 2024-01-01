@@ -27,7 +27,7 @@ pipeline {
         stage('Terraform Init'){
             steps{
             echo 'Terraform initlization in progress'
-            sh 'terraform init'
+            sh 'terraform init -reconfigure'
         }
         }
         stage('Terraform Plan'){
